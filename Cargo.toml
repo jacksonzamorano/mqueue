@@ -2,6 +2,12 @@
 name = "mqueue"
 version = "0.1.0"
 edition = "2021"
+description = "A mutable FIFO queue."
+documentation = "https://github.com/jacksonzamorano/mqueue"
+homepage = "https://github.com/jacksonzamorano/mqueue"
+repository = "https://github.com/jacksonzamorano/mqueue"
+license = "MIT"
+license-file = "LICENSE.md"
 
 autobins = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
