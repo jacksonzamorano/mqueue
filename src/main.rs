@@ -15,34 +15,34 @@ impl<T: Clone> WorkQueue<T> {
     }
     pub fn current_value(&self) -> Option<T> {
         if self.current_index < self.data.len() {
-            return Some(self.data[self.current_index].clone());
+            Some(self.data[self.current_index].clone())
         } else {
-            return None;
+            None
         }
     }    
     pub fn current_ref(&self) -> Option<&T> {
         if self.current_index < self.data.len() {
-            return Some(&self.data[self.current_index]);
+            Some(&self.data[self.current_index])
         } else {
-            return None;
+            None
         }
     }    
     pub fn next_value(&mut self) -> Option<T> {
         if self.current_index < self.data.len() {
             let result = Some(self.data[self.current_index].clone());
             self.current_index += 1;
-            return result;
+            result
         } else {
-            return None;
+            None
         }
     }
     pub fn next_ref(&mut self) -> Option<&T> {
         if self.current_index < self.data.len() {
             let result = Some(&self.data[self.current_index]);
             self.current_index += 1;
-            return result;
+            result
         } else {
-            return None;
+            None
         }
     }
     pub fn increment(&mut self) {
@@ -54,13 +54,13 @@ impl<T: Clone> WorkQueue<T> {
     }
     pub fn remaining(&self) -> usize {
         if self.data.len() > self.current_index {
-            return self.data.len() - self.current_index;
+            self.data.len() - self.current_index
         } else {
-            return 0;
+            0
         }
     }
     pub fn dirty_count(&self) -> usize {
-        return self.current_index;
+        self.current_index
     }
 }
 

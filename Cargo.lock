@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "workqueue"
+name = "mqueue"
 version = "0.1.0"
